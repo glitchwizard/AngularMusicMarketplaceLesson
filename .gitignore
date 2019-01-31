@@ -43,6 +43,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-#Firebase credentials
+#Firebase Credentials
 /src/app/api-keys.ts
-/.vs

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Album } from '../album.model';
 import { AlbumService } from '../album.service';
-
+import { Album } from '../album.model';
 
 @Component({
   selector: 'app-admin',
@@ -9,18 +8,16 @@ import { AlbumService } from '../album.service';
   styleUrls: ['./admin.component.css'],
   providers: [AlbumService]
 })
-
 export class AdminComponent implements OnInit {
 
-  constructor(private albumSevice: AlbumService) { }
+  constructor(private albumService: AlbumService) { }
 
   ngOnInit() {
   }
 
-  submitForm(title: string, artist: string, description: string) {
+  submitForm(title: string, artist: string, description: string){
     var newAlbum: Album = new Album(title, artist, description);
-    console.log(newAlbum);
-    this.albumSevice.addAlbum(newAlbum);
+    this.albumService.addAlbum(newAlbum);
   }
 
 }

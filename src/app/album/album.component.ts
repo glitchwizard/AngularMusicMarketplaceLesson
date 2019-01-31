@@ -5,12 +5,12 @@ import { AlbumService } from '../album.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
-  selector: 'app-marketplace',
-  templateUrl: './marketplace.component.html',
-  styleUrls: ['./marketplace.component.css'],
+  selector: 'app-album',
+  templateUrl: './album.component.html',
+  styleUrls: ['./album.component.css'],
   providers: [AlbumService]
 })
-export class MarketplaceComponent implements OnInit{
+export class AlbumComponent implements OnInit {
   albums: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 

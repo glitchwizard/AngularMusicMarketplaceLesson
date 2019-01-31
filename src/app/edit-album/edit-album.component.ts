@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Album } from '../album.model';
 import { AlbumService } from '../album.service';
 
@@ -9,11 +9,10 @@ import { AlbumService } from '../album.service';
   providers: [AlbumService]
 })
 export class EditAlbumComponent implements OnInit {
-  @Input() selectedAlbum; 
+  @Input() selectedAlbum;
+  editAlbum = null;
 
-  constructor(
-    private albumService: AlbumService
-  ) { }
+  constructor(private albumService: AlbumService) { }
 
   ngOnInit() {
   }
@@ -26,6 +25,10 @@ export class EditAlbumComponent implements OnInit {
     if(confirm("Are you sure you want to delete this item from the inventory?")){
       this.albumService.deleteAlbum(albumToDelete);
     }
+  }
+
+  editSpecificAlbum(){
+    this.editAlbum = "true";
   }
 
 }

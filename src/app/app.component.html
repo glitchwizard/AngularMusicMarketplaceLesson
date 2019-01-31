@@ -1,19 +1,18 @@
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" routerLink=""> <h2>Epicodus Tunes </h2> </a>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" routerLink="">Epicodus Tunes</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="about">About</a></li>
+            <li><a routerLink="marketplace">Market Place</a></li>
+        </ul>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li> <a routerLink="about"> <h5>About</h5></a></li>
-      <li><a routerLink="marketplace"> <h5> Marketplace </h5> </a></li>
-    </ul>
-  </div>
 </nav>
 
-
 <div class="container">
-  <p></p>
-  <router-outlet></router-outlet>
+    <h1>{{title}}</h1>
+    <router-outlet></router-outlet>
 </div>
 
 <footer class="footer">
